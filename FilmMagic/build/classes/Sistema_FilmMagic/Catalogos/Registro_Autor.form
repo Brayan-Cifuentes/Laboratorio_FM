@@ -179,7 +179,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ingrese el ID del Empleado: "/>
+        <Property name="text" type="java.lang.String" value="Ingrese el ID del Autor: "/>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="txt_buscar">

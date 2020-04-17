@@ -9,6 +9,8 @@ import Sistema_FilmMagic.Catalogos.Registro_Clientes;
 import Sistema_FilmMagic.Catalogos.Registro_Empleados;
 import Sistema_FilmMagic.Catalogos.Registro_Autor;
 import Sistema_FilmMagic.Catalogos.Registro_Productos;
+import Sistema_FilmMagic.Procesos.Renta_Productos;
+import Sistema_FilmMagic.Procesos.Devolucion_Productos;
 /**
  *
  * @author Brayan Cifuentes
@@ -22,6 +24,8 @@ public class Home extends javax.swing.JFrame {
     private Registro_Clientes ventana_Clientes;
     private Registro_Autor ventana_Autor;
     private Registro_Productos ventana_Productos;
+    private Renta_Productos ventana_Renta;
+    private Devolucion_Productos ventana_Devolucion;
     
     public Home() {
         initComponents();
@@ -55,7 +59,7 @@ public class Home extends javax.swing.JFrame {
         jDesktopPane1.setLayout(jDesktopPane1Layout);
         jDesktopPane1Layout.setHorizontalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 945, Short.MAX_VALUE)
+            .addGap(0, 1066, Short.MAX_VALUE)
         );
         jDesktopPane1Layout.setVerticalGroup(
             jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,10 +111,22 @@ public class Home extends javax.swing.JFrame {
         jMenu2.setText("Procesos");
         jMenu2.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
+        jMenuItem5.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jMenuItem5.setText("Renta de Productos");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem5);
 
+        jMenuItem6.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jMenuItem6.setText("Devolucion de Productos");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem6);
 
         jMenuBar1.add(jMenu2);
@@ -118,6 +134,7 @@ public class Home extends javax.swing.JFrame {
         jMenu3.setText("Salir");
         jMenu3.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
 
+        jMenuItem7.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jMenuItem7.setText("Salir del sistema");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,6 +185,16 @@ public class Home extends javax.swing.JFrame {
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         dispose();
     }//GEN-LAST:event_jMenuItem7ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        ventana_Devolucion=new Devolucion_Productos();
+        jDesktopPane1.add(ventana_Devolucion);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        ventana_Renta= new Renta_Productos();
+        jDesktopPane1.add(ventana_Renta);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
      * @param args the command line arguments

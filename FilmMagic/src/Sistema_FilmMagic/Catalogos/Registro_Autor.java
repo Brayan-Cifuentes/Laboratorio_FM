@@ -82,7 +82,7 @@ public class Registro_Autor extends javax.swing.JInternalFrame {
             }
         });
 
-        jLabel9.setText("Ingrese el ID del Empleado: ");
+        jLabel9.setText("Ingrese el ID del Autor: ");
 
         jButton4.setText("Buscar");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
